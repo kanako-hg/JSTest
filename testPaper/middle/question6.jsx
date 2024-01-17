@@ -24,6 +24,6 @@ const TestComponent1 = ({ userName }) => {
   return <button>入力エリアをフォーカスする</button>;
 };
 
-// export default TestComponent1;
+export default TestComponent1;
 
-TestComponent1();
+// TestComponent1();
