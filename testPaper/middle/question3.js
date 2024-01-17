@@ -15,4 +15,13 @@
  */
 export const sumAndAverage = (array) => {
   //ここに記述
+  let n = 0;
+  let tempSum = 0;
+  while (array.length > n) {
+    tempSum = tempSum + array[n];
+    n++;
+  }
+  console.log({ sum: tempSum, average: tempSum / array.length });
 };
+
+// sumAndAverage([1, 2, 3, 4, 5]);

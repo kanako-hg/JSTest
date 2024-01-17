@@ -18,4 +18,12 @@
  */
 export const toggleArrayElement = (array, ele) => {
   //ここに記述
+  if (array.indexOf(ele) === -1) {
+    array.push(ele);
+  } else {
+    array.splice(array.indexOf(ele), 1);
+  }
+  console.log(array);
 };
+// toggleArrayElement([1, 2, 3, 4, 5], 4);
+// toggleArrayElement([1, 2, "3", 4, 5], 3);

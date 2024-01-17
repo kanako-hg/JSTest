@@ -13,4 +13,16 @@
 
 export const changeElementText = (elementId, text) => {
   //ここに記述
+  const searchElements = document.getElementsByTagName(elementId);
+
+  if (searchElements.length !== 0) {
+    searchElements[0].textContent = text;
+  } else {
+    const newItem = document.createElement("div");
+    newItem.setAttribute("id", elementId);
+    document.body.appendChild(newItem);
+    newItem.textContent = text;
+  }
 };
+// console.log(document);
+// changeElementText("p", "testtttttt");

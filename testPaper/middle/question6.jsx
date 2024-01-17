@@ -13,6 +13,17 @@
  * @param {{userName:string}} props
  * @returns {ReactNode}
  */
-const TestComponent1 = ({ userName }) => {};
+const TestComponent1 = ({ userName }) => {
+  // // const ul = document.createElement("ul");
+  // // document.body.appendChild(ul);
+  // // const li = document.createElement("li");
+  // // ul.appendChild(li);
+  // // li.textContent = <span>{userName}</span>;
+  // const inputElement = useRef(null);
 
-export default TestComponent1;
+  return <button>入力エリアをフォーカスする</button>;
+};
+
+// export default TestComponent1;
+
+TestComponent1();
