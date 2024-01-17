@@ -8,11 +8,28 @@
 // 4. checkboxをクリックしたら、spanタグに打ち消し線が入るようにしましょう
 // 5. checkboxのvalueのデフォルト値はfalseにしてください。
 // 6. styleの付け方はインラインスタイルを適応してください。
-
 /**
  * @param {{userName:string}} props
  * @returns {ReactNode}
  */
-const TestComponent1 = ({ userName }) => {};
+
+import { useState } from "react";
+
+const TestComponent1 = ({ userName }) => {
+  const [isDone, setIsDone] = useState(false);
+  return (
+    <li>
+      <input
+        type="checkbox"
+        onChange={() => {
+          setIsDone(!isDone);
+        }}
+      />
+      <span style={{ textDecoration: isDone ? "line-through" : "none" }}>
+        {userName}
+      </span>
+    </li>
+  );
+};
 
 export default TestComponent1;

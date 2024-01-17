@@ -13,4 +13,23 @@
 
 export const changeElementText = (elementId, text) => {
   //ここに記述
+  const searchElements = document.getElementById(elementId);
+  console.log(searchElements);
+
+  if (searchElements) {
+    searchElements.textContent = text;
+  } else {
+    if (elementId) {
+      const newItem = document.createElement("div");
+      newItem.setAttribute("id", elementId);
+      document.body.appendChild(newItem);
+      newItem.textContent = text;
+    } else {
+      const newItem = document.createElement("div");
+      document.body.appendChild(newItem);
+      newItem.textContent = text;
+    }
+  }
 };
+// console.log(document);
+// changeElementText("yea", "testssss");
