@@ -21,7 +21,7 @@ export const sumAndAverage = (array) => {
     tempSum = tempSum + array[n];
     n++;
   }
-  console.log({ sum: tempSum, average: tempSum / array.length });
+  return { sum: tempSum, average: tempSum / array.length };
 };
 
 // sumAndAverage([1, 2, 3, 4, 5]);

@@ -26,22 +26,22 @@ export const createUserActionString = (object) => {
   //ここに記述
   if (object.userName) {
     if (object.action) {
-      console.log(`${object.userName}さんが${object.action}しました`);
+      return `${object.userName}さんが${object.action}しました`;
     } else {
-      console.log(`${object.userName}さんは何もしませんでした`);
+      return `${object.userName}さんは何もしませんでした`;
     }
   } else {
     if (object.action) {
-      console.log(`名無しさんが${object.action}しました`);
+      return `名無しさんが${object.action}しました`;
     } else {
-      console.log(`名無しさんは何もしませんでした`);
+      return `名無しさんは何もしませんでした`;
     }
   }
 };
 
-// createUserActionString({ userName: "田中", action: "挨拶" });
-// createUserActionString({ userName: "山田", action: "洗濯" });
-// createUserActionString({ action: "勉強" });
-// createUserActionString({ userName: "", action: "勉強" });
-// createUserActionString({ userName: "佐藤" });
-// createUserActionString({ userName: "佐藤", action: "" });
+createUserActionString({ userName: "田中", action: "挨拶" });
+createUserActionString({ userName: "山田", action: "洗濯" });
+createUserActionString({ action: "勉強" });
+createUserActionString({ userName: "", action: "勉強" });
+createUserActionString({ userName: "佐藤" });
+createUserActionString({ userName: "佐藤", action: "" });

@@ -11,7 +11,8 @@
  * @param {string} text
  */
 
-export const changeElementText = (elementId, text) => {
+// export
+const changeElementText = (elementId, text) => {
   //ここに記述
   const searchElements = document.getElementsByTagName(elementId);
 

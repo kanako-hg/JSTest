@@ -23,7 +23,7 @@ export const toggleArrayElement = (array, ele) => {
   } else {
     array.splice(array.indexOf(ele), 1);
   }
-  console.log(array);
+  return array;
 };
-// toggleArrayElement([1, 2, 3, 4, 5], 4);
-// toggleArrayElement([1, 2, "3", 4, 5], 3);
+// console.log(toggleArrayElement([1, 2, 3, 4, 5], 4));
+// console.log(toggleArrayElement([1, 2, "3", 4, 5], 3));
