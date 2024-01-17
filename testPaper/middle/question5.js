@@ -11,12 +11,14 @@
  * @param {string} text
  */
 
-export const changeElementText = (elementId, text) => {
+// export
+const changeElementText = (elementId, text) => {
   //ここに記述
-  const searchElements = document.getElementsByTagName(elementId);
+  const searchElements = document.getElementById(elementId);
+  console.log(searchElements);
 
-  if (searchElements.length !== 0) {
-    searchElements[0].textContent = text;
+  if (searchElements) {
+    searchElements.textContent = text;
   } else {
     if (elementId) {
       const newItem = document.createElement("div");
@@ -31,4 +33,4 @@ export const changeElementText = (elementId, text) => {
   }
 };
 // console.log(document);
-// changeElementText("", "OK");
+// changeElementText("yea", "testssss");
