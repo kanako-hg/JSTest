@@ -19,7 +19,7 @@ const TestComponent2 = ({ userNames }) => {
       {userNames.map((userName, index) => {
         return (
           <TestComponent1
-            content={userName === "自分" ? "" : userName}
+            userName={userName === "自分" ? "" : userName}
             key={index}
           />
         );
